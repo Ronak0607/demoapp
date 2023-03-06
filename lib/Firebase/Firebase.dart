@@ -35,16 +35,3 @@ Future<String> logIn(String e1, String p1) async {
 
   return "";
 }
-
-void logout() {
-  FirebaseAuth firebaseAuth = FirebaseAuth.instance;
-  firebaseAuth.signOut();
-}
-
-bool checkUser() {
-  User? user = FirebaseAuth.instance.currentUser;
-  if (user != null) {
-    return true;
-  }
-  return false;
-}
